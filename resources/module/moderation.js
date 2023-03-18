@@ -59,9 +59,9 @@
         'content-type': 'text/plain;charset=UTF-8',
         'x-kl-ajax-request': 'Ajax_Request',
         'x-csrf-token': config.api.csrfToken,
-        'x-lang': 'ru'
+        'x-lang': 'en'
       },
-      url: "https://n.maps.yandex.ru" + config.api.url + "/batch",
+      url: "https://mapeditor.yandex.com" + config.api.url + "/batch",
       dataType: "json",
       data: JSON.stringify(data),
       success: function (response) {
@@ -128,9 +128,9 @@
             'content-type': 'text/plain;charset=UTF-8',
             'x-kl-ajax-request': 'Ajax_Request',
             'x-csrf-token': config.api.csrfToken,
-            'x-lang': 'ru'
+            'x-lang': 'en'
           },
-          url: "https://n.maps.yandex.ru" + config.api.url + "/batch",
+          url: "https://mapeditor.yandex.com" + config.api.url + "/batch",
           dataType: "json",
           data: JSON.stringify(dataModerationTasks),
           success: function (response) {
@@ -212,11 +212,11 @@
         buttonClose.removeClass("nk-button_hovered");
       })
 
-      popupShow(buttonClose, "Подтвердить загруженные задачи модерации");
+      popupShow(buttonClose, "Confirm uploaded moderation tasks");
       buttonClose.on("click", () => moderationAction("close"));
     }else {
       buttonClose.addClass('nk-button_disabled');
-      popupShow(buttonClose, "Закрытие задачи модерации доступно только сотрудникам Яндекса");
+      popupShow(buttonClose, "Closing the moderation task is only available to Yandex staff");
     }
 
     // Принять
@@ -227,7 +227,7 @@
       buttonAccept.removeClass("nk-button_hovered");
     });
 
-    popupShow(buttonAccept, "Принять загруженные задачи модерации");
+    popupShow(buttonAccept, "Accept uploaded moderation tasks");
     buttonAccept.on("click", () => moderationAction("accept"));
 
 
@@ -239,7 +239,7 @@
       buttonRevert.removeClass("nk-button_hovered");
     });
 
-    popupShow(buttonRevert, "Откатить загруженные задачи модерации с причиной «Вандализм»");
+    popupShow(buttonRevert, "Rollback the uploaded moderation tasks with the reason "Vandalism"");
     buttonRevert.on("click", () => moderationAction("revert"));
 
   });

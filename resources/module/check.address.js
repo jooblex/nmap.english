@@ -99,7 +99,7 @@
     addressArray.forEach((address) => {
       /* Приведем вид адресов к единому стилю */
 
-      if (typeObject === "Дорога") {
+      if (typeObject === "Road") {
         yanedxAddress.push({
           id: address.id,
           title: address.title
@@ -120,7 +120,7 @@
     userAddress.forEach((addressNumber) => {
       const address_comma = nameRoad + ", " + addressNumber.trim();
       const address_bracket = addressNumber.trim() + " (" + nameRoad + ")";
-      const address = typeObject === "Дорога" ? address_comma : address_bracket;
+      const address = typeObject === "Road" ? address_comma : address_bracket;
 
       let check = false;
       
@@ -280,7 +280,7 @@
       const dataYandex = element.attr("data-nk-address-yandex");
 
       if (dataUser && dataYandex) {
-        popupContent.html("Текущий адрес — <strong>" + dataYandex + "</strong><br/>Предполагаемый адрес — <strong>" + dataUser +"</strong>");
+        popupContent.html("Current address point — <strong>" + dataYandex + "</strong><br/>Suggested address point — <strong>" + dataUser +"</strong>");
       }else {
         popupContent.text(dataUser ? dataUser : dataYandex);
       }
@@ -344,7 +344,7 @@
             "branch": "0",
             "limit": 10000,
             "categoryId": "addr",
-            "roleId": typeObject === "Дорога" ? "associated_with" : "addr_associated_with",
+            "roleId": typeObject === "Road" ? "associated_with" : "addr_associated_with",
             "token": JSON.parse(localStorage.getItem("nk:token"))
           }
         }
@@ -356,9 +356,9 @@
         'content-type': 'text/plain;charset=UTF-8',
         'x-kl-ajax-request': 'Ajax_Request',
         'x-csrf-token': config.api.csrfToken,
-        'x-lang': 'ru'
+        'x-lang': 'en'
       },
-      url: "https://n.maps.yandex.ru/" + config.api.url + "/batch",
+      url: "https://mapeditor.yandex.com" + config.api.url + "/batch",
       dataType: "json",
       data: JSON.stringify(data),
       success: function (response) {
@@ -416,7 +416,7 @@
     const objectViewElement = $(".nk-geoobject-viewer-view");
     
     nameRoad = objectViewElement.find(".nk-name-row-layout__name .nk-text-control__text span").text();
-    const location = objectViewElement.find(".nk-grid.nk-sidebar-control.nk-section.nk-section_level_2.nk-geoobject-relations-view .nk-grid__col.nk-grid__col_span_8 .nk-geoobject-relations-view__item .nk-geoobject-link-view").text().replace("город ", "");
+    const location = objectViewElement.find(".nk-grid.nk-sidebar-control.nk-section.nk-section_level_2.nk-geoobject-relations-view .nk-grid__col.nk-grid__col_span_8 .nk-geoobject-relations-view__item .nk-geoobject-link-view").text().replace("city ", "");
     
     objectViewElement.css("display", "none");
 
@@ -451,7 +451,7 @@
     elementsView.titleElement.colClose.find(".nk-icon_close").on("click", hideView);
     elementsView.titleElement.colClose.hover(() => {      
       popup.css({ "left": window.innerWidth - MAGIC_LEFT_CLOSE + "px", "top": "105px" });
-      popup.find(".nk-popup__content").text("Закрыть (Esc)");
+      popup.find(".nk-popup__content").text("Close (Esc)");
       popup.addClass("nk-popup_visible");
     }, () => {
       popup.removeClass("nk-popup_visible");
@@ -485,7 +485,7 @@
 
     if (settingCheckAddress["link-yandex"]) {
       /* Добавление перехода поиска в Яндексе */
-      elementsView.form.block_text_object.append('<a role="link" class="nk-link nk-link_theme_islands" href="https://yandex.ru/search/?text='+ location + '+' + nameRoad +'" target="_blank" style="margin-left: 10px;">Яндекс</a>');
+      elementsView.form.block_text_object.append('<a role="link" class="nk-link nk-link_theme_islands" href="https://yandex.com/search/?text='+ location + '+' + nameRoad +'" target="_blank" style="margin-left: 10px;">Yandex</a>');
     }
 
     if (settingCheckAddress["link-google"]) {
@@ -592,7 +592,7 @@
     const addressBlock = $(".nk-geoobject-viewer-view .nk-grid.nk-sidebar-control.nk-section.nk-section_level_2.nk-geoobject-relations-view:nth-last-child(3) .nk-grid__col.nk-grid__col_span_8");
 
     /* Проверка на тип объекта и наличие адресов */
-    if ((typeObject !== "Дорога" && typeObject !== "Административная единица") || addressBlock.text() === "отсутствуют") {
+    if ((typeObject !== "Road" && typeObject !== "Administrative division") || addressBlock.text() === "not available") {
       activeObject = false;
 
       if (!!$(".nk-address-check")[0]) {

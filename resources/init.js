@@ -22,29 +22,29 @@
 
 
   /* Сообщение об ошибке по умолчанию */
-  const defaultError = "Извините, что-то пошло не так";
+  const defaultError = "Sorry, something went wrong.";
 
   /* Заготовки текста */
   const text = {
     getUser: {
-      button: "Поиск пользователей",
+      button: "Search for users",
       view: {
-        title: "Поиск пользователей",
-        defaultValue: "Для поиска начните вводить логин",
-        default: "По запросу ничего не найдено",
-        deleteUser: "удалён",
+        title: "Search for users",
+        defaultValue: "To search, start typing Login",
+        default: "The request did not find anything",
+        deleteUser: "deleted",
         info: {
-          access: "Специальные права",
-          createdAt: "Дата регистрации",
-          'rating-pos-full': "Место в рейтинге",
-          'total-edits': "Число правок",
-          'feedback-count': "Разобрано неточностей",
+          access: "Special Permissions",
+          createdAt: "Date of registration",
+          'rating-pos-full': "Top user place",
+          'total-edits': "Made edits",
+          'feedback-count': "Resolved possible problems",
           banned: {
-            time: "Срок блокировки",
-            user: "Модератор",
-            reason: "Причина блокировки"
+            time: "Blocking period",
+            user: "Moderator",
+            reason: "Reason for blocking"
           },
-          noCategoryGroup: 'У пользователя нет правок'
+          noCategoryGroup: 'User has no edits'
         },
       },
       notification: {
@@ -54,186 +54,186 @@
       }
     },
     address: {
-      button: "Проверить адреса",
+      button: "Check address points",
       view: {
-        title: "Проверка адресов",
+        title: "Address points Checking",
         label: {
-          street: "Дорога",
-          listAddress: "Номера домов"
+          street: "Street",
+          listAddress: "House numbers"
         },
         button: {
-          cancellation: "Отмена",
-          check: "Проверить"
+          cancellation: "Cancel",
+          check: "Check"
         },
-        load: "Идёт проверка",
+        load: "Check in progress.",
         row: {
-          error: "Не добавленные адреса",
-          not_found: "Несуществующие адреса",
-          warning: "Адреса с ошибкой"
+          error: "Not added address points",
+          not_found: "Non-existent address points",
+          warning: "Address points with an error"
         },
         default: {
-          error: "Все адреса добавлены",
-          not_found: "Все адреса существуют",
-          warning: "Ошибок в адресах нет"
+          error: "All address points added",
+          not_found: "All address points exist",
+          warning: "There are no errors in the address points"
         }
       },
       notification: {
         success: {
-          no_data: "Ошибки в адресах не найдены"
+          no_data: "Errors in the address points were not found"
         },
         error: {
           default: defaultError,
           valid: {
-            count: "Номера домов должны быть разделены запятыми",
-            road: "Номера домов не должны содержать название дороги"
+            count: "House numbers must be separated by commas",
+            road: "House numbers must not contain the name of the road"
           }
         }
       }
     },
     categories: {
       "rd-group": {
-        title: "Дороги",
+        title: "Roads",
       },
       "urban-roadnet-group": {
-        title: "Дорожная инфрастуктура",
+        title: "Road infrastructure",
       },
       "cond-group": {
-        title: "Условия движения",
+        title: "Road signs",
       },
       "parking-group": {
-        title: "Парковки",
+        title: "Parking",
       },
       "urban-group": {
-        title: "Территории",
+        title: "Territory",
       },
       "bld-group": {
-        title: "Здания",
+        title: "Buildings",
       },
       "indoor-group": {
-        title: "Схемы помещений",
+        title: "Indoor plans",
       },
       "poi-group": {
-        title: "Места",
+        title: "Points of interest",
       },
       "entrance-group": {
-        title: "Входы в здание",
+        title: "Entrances",
       },
       "addr-group": {
-        title: "Адреса",
+        title: "Address points",
       },
       "fence-group": {
-        title: "Заборы",
+        title: "Fences",
       },
       "ad-group": {
-        title: "Административное деление",
+        title: "Administrative division",
       },
       "vegetation-group": {
-        title: "Растительность",
+        title: "Vegetation",
       },
       "relief-group": {
-        title: "Рельеф",
+        title: "Terrain",
       },
       "hydro-group": {
-        title: "Гидрография",
+        title: "Hydrography",
       },
       "group-edits": {
-        title: "Групповые правки",
+        title: "Group edits",
       },
       "transport-group": {
-        title: "Транспорт",
+        title: "Transport type",
       },
       "transport-metro-group": {
-        title: "Скоростной транспорт",
+        title: "Rapid transit",
       },
       "transport-airport-group": {
-        title: "Воздушный транспорт",
+        title: "Rapid transit",
       },
       "transport-railway-group": {
-        title: "Железные дороги",
+        title: "Railways",
       },
       "transport-waterway-group": {
-        title: "Водный транспорт",
+        title: "Water transport",
       },
     },
     blocked: {
-      button: "Выбрать шаблон",
+      button: "Choose a template",
       portal: {
-        title: "Выберите шаблон блокировки",
+        title: "Choose a Blocking Template",
         pattern: [
-          "Игнорирование замечаний",
-          "Невозможно связаться с пользователем",
-          "Систематические нарушения правил",
-          "Ненормативная лексика",
-          "Высказывания, разжигающие вражду",
-          "Вандализм",
-          "Дубликат заблокированного профиля"
+          "Ignoring comments",
+          "Unable to contact the user",
+          "Systematic abuse of the rules",
+          "Obscene language",
+          "Hate speech",
+          "Vandalism",
+          "Copy a blocked profile"
         ]
       },
       pattern: [
         // Игнорирование замечаний
         {
-          text: "Добрый день, {user_name}!\n\nК сожалению, Вы игнорируете замечания модератора и продолжаете допускать ошибки при рисовании карты. Пожалуйста, ответьте мне в [Яндекс.Месседжере](https://yandex.ru/chat#/) и я сниму блокировку досрочно.",
+          text: "Good afternoon, {user_name}!\n\nUnfortunately, you ignore the moderator's comments and continue to make mistakes when edit the map. Please reply to me at [Yandex.Messenger](https://yandex.com/chat#/) and I will remove the blockage early.",
           height: 192,
-          term: "Выберите любой срок блокировки, но не более 3 дней"
+          term: "Choose any blocking period, but not more than 3 days"
         },
 
         // Невозможно связаться с пользователем
         {
-          text: "Добрый день, {user_name}!\n\nК сожалению, я не смог связаться с Вами через [Яндекс.Месседжер](https://yandex.ru/chat#/). Пожалуйста, снимите ограничение и напишите мне, после чего я сниму блокировку досрочно.",
+          text: "Good afternoon, {user_name}!\n\nUnfortunately, I have not been able to contact you through [Yandex.Messenger](https://yandex.com/chat#/). Please remove the restriction and email me, and then I will remove the lock early.",
           height: 192,
-          term: "Рекомендуемый срок блокировки для этой причины — день"
+          term: "The recommended lockout period for this reason is a day"
         },
 
         // Систематические нарушения правил
         {
-          text: "Добрый день, {user_name}!\n\nК сожалению, Вы допускаете множество ошибок при рисовании объектов, несмотря на их разъяснение Вам.\n\nПожалуйста, изучите [правила](https://yandex.ru/support/nmaps/) за время блокировки, чтобы в будущем не допускать ошибок.",
+          text: "Good afternoon, {user_name}!\n\nUnfortunately, you make many mistakes when edit objects, despite them being explained to you.\n\nPlease study [rules](https://yandex.com/support/mapeditor/) for the blocking time, so as not to make mistakes in the future.",
           height: 224,
-          term: "Выберите любой срок блокировки, но не более 3 дней",
+          term: "Choose any blocking period, but not more than 3 days",
           warning: {
-            title: "Желательно указать ссылки на несколько правок с ошибками",
-            gaid: "Это нужно, чтобы пользователь лучше понимал, какие ошибки он допускал повторно.\n\nСсылки можно указать после фразы «... несмотря на их разъяснение Вам». На следующей строке можно написать «Вот несколько примеров из них:» и с новой строки указать ссылки на правки с описанием ошибки.\n\nЧтобы причина блокировки имела единый стиль написания, рекомендуется использовать конструкцию вида:\n— [Краткое описание ошибки](ссылка на правку)"
+            title: "It is desirable to provide links to several edits with errors",
+            gaid: "This is necessary so that the user can better understand what mistakes he has made repeatedly.\n\nReferences can be specified after the phrase «... in spite of their explanation to you». On the next line you can write «Here are a few examples of them:» and on a new line provide links to edits with a description of the mistake.\n\nFor the reason for blocking to have a uniform writing style, it is recommended to use a construction of the form:\n— [Short description of the error](link to edit)"
           }
         },
 
         // Ненормативная лексика
         {
-          text: "Добрый день, {user_name}!\n\nВ Народной карте запрещено использование ненормативной лексики в комментариях или профиле. Пожалуйста, пересмотрите свое отношение к картографии и за время блокировки изучите [правила](https://yandex.ru/support/nmaps/)",
+          text: "Good afternoon, {user_name}!\n\nIn Yandex Map Editor prohibits the use of profanity in comments or profile. Please reconsider your attitude to cartography and study [rules] during the blocking period(https://yandex.com/support/mapeditor/)",
           height: 212,
-          term: "Выберите любой срок блокировки, но не более 3 дней"
+          term: "Choose any blocking period, but not more than 3 days"
         },
 
         // Высказывания разжигающие вражду
         {
-          text: "Добрый день, {user_name}!\n\nВ Народной карте запрещено использование высказываний, направленных на возбуждение ненависти либо вражды или на унижение достоинства человека либо группы лиц.\n\nПожалуйста, пересмотрите свое отношение к картографии и за время блокировки изучите [правила](https://yandex.ru/support/nmaps/)",
+          text: "Good afternoon, {user_name}!\n\nIn Yandex Map Editor prohibits the use of statements directed at inciting hatred or enmity, or at disparagement of a person or group of persons.\n\nPlease reconsider your attitude to cartography and study [rules] during the blocking period(https://yandex.com/support/mapeditor/)",
           height: 258,
-          term: "Выберите любой срок блокировки, но не более 3 дней"
+          term: "Choose any blocking period, but not more than 3 days"
         },
 
         // Вандализм
         {
-          text: "Добрый день, {user_name}!\n\nК сожалению, Ваши правки признаны вандальными, поэтому Ваш профиль заблокирован навсегда.",
+          text: "Good afternoon, {user_name}!\n\nUnfortunately, your edits are considered vandalism, so your profile is permanently blocked.",
           height: 160,
-          term: "Рекомендуемый срок блокировки для этой причины — бессрочно"
+          term: "The recommended blocking period for this reason is forever"
         },
 
         // Дубликат заблокированного профиля
         {
-          text: "Добрый день, {user_name}!\n\nК сожалению, Ваш профиль признан дубликатом другого, заблокированного профиля.",
+          text: "Good afternoon, {user_name}!\n\nUnfortunately, your profile is recognized as a copy of another one, of a blocked profile.",
           height: 160,
-          term: "Рекомендуемый срок блокировки для этой причины — бессрочно",
+          term: "The recommended blocking period for this reason is forever",
           warning: {
-            title: "Желательно указать ссылку на другой профиль этого пользователя",
-            gaid: "Это нужно, чтобы при позникновении спорной ситуации было легче найти дубликат профиля.\n\nСсылку можно указать вместо надписи «заблокированного профиля».\n\nЧтобы причина блокировки имела единый стиль написания, рекомендуется использовать конструкцию вида: [заблокированного профиля](ссылка на профиль)"
+            title: "It is desirable to provide a link to another profile of this user",
+            gaid: "This is to make it easier to find a copy of the profile if a dispute arises.\n\nThe link can be specified instead of the inscription «of a blocked profile».\n\nTo make the reason for blocking have a uniform writing style, it is recommended to use a construction like: [blocked profile](link to profile)"
           }
         }
       ],
-      pattern_end: "\n\nВы всегда можете обжаловать блокировку через [службу поддержки](https://yandex.ru/support/nmaps/troubleshooting/fb_nmaps.html)",
+      pattern_end: "\n\nYou can always appeal a blocking through [support service](https://yandex.com/support/mapeditor/troubleshooting/fb_nmaps.html)",
     },
     tiles: {
-      popup: "Цветовая коррекция спутниковых тайлов",
+      popup: "Color correction of satellite tiles",
       fulter: {
         brightness: {
-          title: "Яркость",
+          title: "Brightness",
           max: 200,
           min: 0,
           meaning: 100,
@@ -241,7 +241,7 @@
           unit: ""
         },
         contrast: {
-          title: "Контраст",
+          title: "Contrast",
           max: 200,
           min: 0,
           meaning: 100,
@@ -249,7 +249,7 @@
           unit: ""
         },
         grayscale: {
-          title: "Баланс черного и белого",
+          title: "Black and White Balance",
           max: 100,
           min: 0,
           meaning: 100,
@@ -257,7 +257,7 @@
           unit: ""
         },
         opacity: {
-          title: "Непрозрачность",
+          title: "Opacity",
           max: 100,
           min: 0,
           meaning: 100,
@@ -265,7 +265,7 @@
           unit: ""
         },
         saturate: {
-          title: "Насыщенность",
+          title: "Saturation",
           max: 1500,
           min: 0,
           meaning: 100,
@@ -273,7 +273,7 @@
           unit: ""
         },
         'hue-rotate': {
-          title: "Сдвиг цветов",
+          title: "Color Shift",
           max: 350,
           min: 0,
           meaning: 1,
@@ -281,7 +281,7 @@
           unit: "deg"
         },
         invert: {
-          title: "Инверсия цветов",
+          title: "Color Inversion",
           max: 100,
           min: 0,
           meaning: 100,
@@ -296,51 +296,51 @@
         icon: '<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="M5.111 7.233l-2.121 7.778 7.778-2.121-2.184-2.184 3.584-3.584c1.324-1.324 1.833-1.115 1.833.745v12.133h2v-12.133c0-3.644-2.665-4.741-5.247-2.159l-3.584 3.584-2.058-2.058z"/></svg>'
       },
       l180: {
-        title: "левый разворот",
+        title: "left u-turn",
         icon: '<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="M6 9h-3l4 7 4-7h-3v-1c0-1.654 1.345-3 3-3 1.654 0 3 1.345 3 3v12h2v-12c0-2.76-2.242-5-5-5-2.76 0-5 2.242-5 5v1z"/></svg>'
       },
       l45: {
-        title: "плавно налево",
+        title: "smoothly to the left",
         icon: '<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="M7.111 10.767l-2.121-7.778 7.778 2.121-2.184 2.184 3.414 3.414c.579.579 1.003 1.597 1.003 2.414v7.878h-2v-7.878c0-.285-.212-.795-.417-1l-3.414-3.414-2.058 2.058z"/></svg>'
       },
       l90: {
-        title: "налево",
+        title: "to the left",
         icon: '<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="M10 10h10v2h-10v3l-7-4 7-4z"/></svg>'
       },
       lr: {
-        title: "налево через разворот",
+        title: "turn left through the U-turn",
         icon: '<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="M11 6v-3l-7 4 7 4v-3h3.009c1.653 0 2.991 1.342 2.991 3 0 1.654-1.346 3-3.002 3h-3.992c-2.209 0-4.006 1.786-4.006 3.991v2.009h2v-2.009c0-1.097.899-1.991 2.006-1.991h3.992c2.761 0 5.002-2.242 5.002-5 0-2.762-2.232-5-4.991-5h-3.009z"/></svg>'
       },
       r135: {
-        title: "резко направо",
+        title: "sharply to the right",
         icon: '<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="M16.889 7.234l2.121 7.778-7.778-2.121 2.184-2.184-3.584-3.584c-1.324-1.324-1.833-1.115-1.833.745v12.133h-2v-12.133c0-3.644 2.665-4.741 5.247-2.159l3.584 3.584 2.058-2.058z"/></svg>'
       },
       r180: {
-        title: "правый разворот",
+        title: "right u-turn",
         icon: '<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="M19 9l-4 7-4-7h3v-1c0-1.654-1.345-3-3-3-1.654 0-3 1.345-3 3v12h-2v-12c0-2.76 2.242-5 5-5 2.76 0 5 2.242 5 5v1h3z"/></svg>'
       },
       r45: {
-        title: "плавно направо",
+        title: "smoothly to the right",
         icon: '<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="M14.889 10.767l2.121-7.778-7.778 2.121 2.184 2.184-3.414 3.414c-.579.579-1.003 1.597-1.003 2.414v7.878h2v-7.878c0-.285.212-.795.417-1l3.414-3.414 2.058 2.058z"/></svg>'
       },
       r90: {
-        title: "направо",
+        title: "to the right",
         icon: '<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="M13 12h-10v-2h10v-3l7 4-7 4v-3z"/></svg>'
       },
       rl: {
-        title: "направо через разворот",
+        title: "right through the U-turn",
         icon: '<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="M11 6v-3l7 4-7 4v-3h-3.009c-1.653 0-2.991 1.342-2.991 3 0 1.654 1.346 3 3.002 3h3.992c2.209 0 4.006 1.786 4.006 3.991v2.009h-2v-2.009c0-1.097-.899-1.991-2.006-1.991h-3.992c-2.761 0-5.002-2.242-5.002-5 0-2.762 2.232-5 4.991-5h3.009z"/></svg>'
       },
       s: {
-        title: "прямо",
+        title: "straight",
         icon: '<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="M12 9v10h-2v-10h-3l4-7 4 7z"/></svg>'
       },
       sl: {
-        title: "немного левее",
+        title: "a little to the left",
         icon: '<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="M13 9l-4-7-4 7h3v1.506c0 1.601 1.255 3.041 2.846 3.268l3.026.432c.608.087 1.129.684 1.129 1.294v3.5h2v-3.5c0-1.607-1.255-3.046-2.846-3.274l-3.026-.432c-.608-.087-1.129-.684-1.129-1.288v-1.506h3z"/></svg>'
       },
       sr: {
-        title: "немного правее",
+        title: "a little to the right",
         icon: '<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="M9 9l4-7 4 7h-3v1.506c0 1.601-1.255 3.041-2.846 3.268l-3.026.432c-.608.087-1.129.684-1.129 1.294v3.5h-2v-3.5c0-1.607 1.255-3.046 2.846-3.274l3.026-.432c.608-.087 1.129-.684 1.129-1.288v-1.506h-3z"/></svg>'
       }
     }
@@ -465,7 +465,7 @@
     /* Критическая ошибка - нет токена */
     if (!JSON.parse(localStorage.getItem("nk:token"))) {
       setTimeout(() => {
-        window.appChrome.notification("error", "В работе расширения произошла критическая ошибка");
+        window.appChrome.notification("error", "There was a critical error in the operation of the extension");
       }, 100);
       return;
     }
@@ -544,7 +544,7 @@
       const manifest = chrome.runtime.getManifest();
       const v = manifest.version_name;
 
-      const infoVersion = !!update.info.length ? update.info : '<span style="color: var(--nk-name-row-layout__name-type--font-color);">Информации об обновлении нет</span>';
+      const infoVersion = !!update.info.length ? update.info : '<span style="color: var(--nk-name-row-layout__name-type--font-color);">No information about the update</span>';
 
       $("body").append('<div class="nk-portal nk-window-update"><!----><div class="nk-modal nk-modal_theme_islands nk-modal_visible" role="dialog" aria-hidden="false" style="z-index: 10001;"><div class="nk-modal__table"><div class="nk-modal__cell"><div class="nk-modal__content" tabindex="-1"><div class="nk-data-loss-confirmation-view__text nk-section nk-section_level_2"><strong>Доступно обновление расширения</strong><br>Хотите перейти на GitHub, чтобы скачать новую версию?</div><div class="nk-grid nk-sidebar-control nk-section nk-section_level_2 nk-info-update"><div class="nk-grid__col nk-grid__col_span_4"><label style=" color: var(--sidebar-control__label--font-color);">Текущая версия</label></div><div class="nk-grid__col nk-grid__col_span_8">' + v + '</div></div><div class="nk-grid nk-sidebar-control nk-section nk-info-update"><div class="nk-grid__col nk-grid__col_span_4"><label style=" color: var(--sidebar-control__label--font-color);">Доступная версия</label></div><div class="nk-grid__col nk-grid__col_span_8">' + update.lastVersion + '</div></div><div class="nk-grid nk-sidebar-control nk-section nk-info-update"><div class="nk-grid__col nk-grid__col_span_4"><label style=" color: var(--sidebar-control__label--font-color);">Что нового</label></div><div class="nk-grid__col nk-grid__col_span_8">' + infoVersion + '</div></div><div class="nk-form-submit-view nk-form-submit-view_size_l"><button class="nk-button nk-button_theme_islands nk-button_size_l nk-close-window" type="button"><span class="nk-button__text">Напомнить позже</span></button><button class="nk-button nk-button_theme_islands nk-button_size_l nk-button_view_action nk-button_hovered nk-form-submit-view__submit nk-close-window" type="button"><a class="nk-button__text" style="text-decoration: none;color: inherit;" href="https://github.com/Dmitry-407/nmap/releases/latest" target="_blank">Перейти на GitHub</a></button></div></div></div></div></div><!----><!----><!----></div>');
 
@@ -599,7 +599,7 @@
         'content-type': 'text/plain;charset=UTF-8',
         'x-kl-ajax-request': 'Ajax_Request',
         'x-csrf-token': config.api.csrfToken,
-        'x-lang': 'ru'
+        'x-lang': 'en'
       },
       url: window.location.origin + config.api.url + "/batch",
       dataType: "json",
@@ -634,7 +634,7 @@
       headers: {
         'x-kl-ajax-request': 'Ajax_Request',
         'x-csrf-token': config.api.csrfToken,
-        'x-lang': 'ru'
+        'x-lang': 'en'
       },
       url: window.location.origin + config.api.url + "/batch",
       dataType: "json",

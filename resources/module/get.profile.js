@@ -7,7 +7,7 @@
 (function () {
   let lastId = null;
 
-  const month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+  const month = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
   
   const text = window.appChrome.text.getUser;
   const creatElement = window.appChrome.creatElement;
@@ -47,7 +47,7 @@
       status.before('<div class="nk-user-profile-view__name nk-user-name-view_deleted">' + user.displayName + '</div>');
       
       if (user.outsourcer || user.yandex) {
-        status.text("Сотрудник удалён");
+        status.text("Employee removed");
       }
       
       const icon = profileHeader.find(".nk-user-icon_size_large");
@@ -100,7 +100,7 @@
         headers: {
           'x-kl-ajax-request': 'Ajax_Request',
           'x-csrf-token': config.api.csrfToken,
-          'x-lang': 'ru'
+          'x-lang': 'en'
         },
         url: window.location.origin + config.api.url + "/batch",
         dataType: "json",
@@ -125,7 +125,7 @@
 
               const groupIcon = infoAccessElement.find(".nk-user-stat-badge-view_id_indoor-group");
               groupIcon.hover(() => {
-                popup.find(".nk-popup__content").text("Схемы помещений");
+                popup.find(".nk-popup__content").text("Indoor plan");
 
                 const topPopup = groupIcon[0].offsetHeight + groupIcon.offset().top + 5;
                 const leftPopup = window.innerWidth - groupIcon.offset().left;
@@ -159,7 +159,7 @@
 
                   const transportIcon = infoAccessElement.find(".nk-user-stat-badge-view_id_transport-group");
                   transportIcon.hover(() => {
-                    popup.find(".nk-popup__content").text("Нитки транспорта");
+                    popup.find(".nk-popup__content").text("Route options transportation");
 
                     const topPopup = transportIcon[0].offsetHeight + transportIcon.offset().top + 5;
                     const leftPopup = window.innerWidth - transportIcon.offset().left;
@@ -204,7 +204,7 @@
       headers: {
         'x-kl-ajax-request': 'Ajax_Request',
         'x-csrf-token': config.api.csrfToken,
-        'x-lang': 'ru'
+        'x-lang': 'en'
       },
       url: window.location.origin + config.api.url + "/batch",
       dataType: "json",
@@ -260,7 +260,7 @@
         headers: {
           'x-kl-ajax-request': 'Ajax_Request',
           'x-csrf-token': config.api.csrfToken,
-          'x-lang': 'ru'
+          'x-lang': 'en'
         },
         url: window.location.origin + config.api.url + "/batch",
         dataType: "json",
@@ -287,7 +287,7 @@
       const appViewElement = document.querySelector(".nk-app-view");
       editAppView.observe(appViewElement, {childList: true});
     }catch {
-      window.appChrome.notification("error", "Модуль подгрузки дополнительной информации в профиль не запущен");
+      window.appChrome.notification("error", "Module for loading additional information into the profile is not running");
     }
   };
   

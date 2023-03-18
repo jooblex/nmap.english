@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Дополнительные инструменты",
-  "description": "Расширение добавляет новые специальные возможности в Народную карту",
+  "name": "Additional tools",
+  "description": "The expansion adds new special features to the Yandex Map Editor",
   "version": "5.0.0",
   "version_name": "5.0.0",
   "icons": {

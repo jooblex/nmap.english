@@ -13,7 +13,7 @@
     if (info.attrs["sys:not_operating"]) return;
 
     let sectionsElement = $(".nk-sidebar-view.nk-geoobject-viewer-view:not([style]) .nk-scrollable__content .nk-size-observer > div");
-    sectionsElement.append('<div class="nk-section nk-section_level_2 nk-vegetation-system"><div class="nk-indoor_plan-system nk-control-only-layout nk-boolean-text-control nk-form__control"><span class="nk-boolean-text-control__value">Отображается в Яндекс.Картах</span></div></div>');
+    sectionsElement.append('<div class="nk-section nk-section_level_2 nk-vegetation-system"><div class="nk-indoor_plan-system nk-control-only-layout nk-boolean-text-control nk-form__control"><span class="nk-boolean-text-control__value">Displayed on Yandex.Maps</span></div></div>');
   };
 
 
@@ -22,7 +22,7 @@
    */
 
   window.appChrome.eventObect.append({
-    title: ['Схема помещений', 'Indoor map'],
+    title: ['Indoor plan', 'Indoor map'],
     category: "indoor_plan",
     check: () => {
       const indoorPlanObject = $(".nk-sidebar-view.nk-geoobject-viewer-view:not([style]) .nk-indoor_plan-system");

@@ -72,9 +72,9 @@
         'content-type': 'text/plain;charset=UTF-8',
         'x-kl-ajax-request': 'Ajax_Request',
         'x-csrf-token': config.api.csrfToken,
-        'x-lang': 'ru'
+        'x-lang': 'en'
       },
-      url: "https://n.maps.yandex.ru" + config.api.url + "/batch",
+      url: "https://mapeditor.yandex.com" + config.api.url + "/batch",
       dataType: "json",
       data: JSON.stringify(data),
       success: function (response) {
@@ -86,10 +86,10 @@
         const addressBlock = $(".nk-sidebar-view.nk-geoobject-viewer-view:not([style]) .nk-size-observer .nk-island:nth-child(1) .nk-scrollable__content > div");
 
         if (warnings.length > 0) {
-          const count_dublicate = warnings.length % 2 === 0 ? warnings.length + " дубликата" : warnings.length + " дублкиат";
+          const count_dublicate = warnings.length % 2 === 0 ? warnings.length + " duplicate" : warnings.length + " duplicate";
 
           if (!addressBlock.find(".nk-poi-conflicts-viewer-view")[0]) {
-            addressBlock.prepend('<div class="nk-poi-conflicts-viewer-view nk-address-conflicts nk-section nk-section_level_2"><div class="nk-poi-conflicts-viewer-view__header">' + count_dublicate + ' адреса</div><div class="nk-poi-conflicts-viewer-view__zoom-level"><div><div class="nk-poi-conflicts-viewer-view__geoobject"></div></div></div></div>');
+            addressBlock.prepend('<div class="nk-poi-conflicts-viewer-view nk-address-conflicts nk-section nk-section_level_2"><div class="nk-poi-conflicts-viewer-view__header">' + count_dublicate + ' address point</div><div class="nk-poi-conflicts-viewer-view__zoom-level"><div><div class="nk-poi-conflicts-viewer-view__geoobject"></div></div></div></div>');
             const parrent = $(".nk-poi-conflicts-viewer-view .nk-poi-conflicts-viewer-view__geoobject");
 
             warnings.forEach((warning) => {
@@ -147,8 +147,8 @@
       const button_p1 = $("#nk-address-button_p1");
       const button_p2 = $("#nk-address-button_p2");
 
-      popupShow(button_p1, "Создать адрес с номером " + (numberAddres + 1));
-      popupShow(button_p2, "Создать адрес с номером " + (numberAddres + 2));
+      popupShow(button_p1, "Create an address point with a number " + (numberAddres + 1));
+      popupShow(button_p2, "Create an address point with a number " + (numberAddres + 2));
 
       button_p1.hover(() => {
         button_p1.addClass("nk-button_hovered");
@@ -197,7 +197,7 @@
       if (url.indexOf("#!/create?") === -1) return;
 
       const viewTitle = $(".nk-sidebar-view.nk-geoobject-editor-view:not([style]) .nk-sidebar-header-view.nk-grid.nk-section.nk-section_level_1 .nk-sidebar-header-view__title-text").text();
-      if (viewTitle !== "Адрес") return;
+      if (viewTitle !== "Address point") return;
 
       if (!$(".nk-creat-address-block")[0]) {
         const input = $('.nk-sidebar-view.nk-geoobject-editor-view:not([style]) .nk-slide-animation.nk-list-edit-control__item.nk-section.nk-section_level_1:first-child input[name="addr_nm:name"]');
@@ -235,8 +235,8 @@
         const button_m2 = $("#nk-edit-address-button_n2");
         const button_m1 = $("#nk-edit-address-button_n1");
 
-        popupShow(button_m2, "Заполнять номер дома по убыванию с разницей 2");
-        popupShow(button_m1, "Заполнять номер дома по убыванию с разницей 1");
+        popupShow(button_m2, "Fill in the house number in descending order with the difference 2");
+        popupShow(button_m1, "Fill in the house number in descending order with the difference 1");
 
         button_m2.hover(() => {
           button_m2.addClass("nk-button_hovered");
@@ -255,7 +255,7 @@
 
 
         const button_defoult = $("#nk-edit-address-button_defoult");
-        popupShow(button_defoult, "Не использовать автоматическое заполнение номера дома");
+        popupShow(button_defoult, "Do not use automatic filling of the house number");
 
         button_defoult.hover(() => {
           button_defoult.addClass("nk-button_hovered");
@@ -269,8 +269,8 @@
         const button_p1 = $("#nk-edit-address-button_p1");
         const button_p2 = $("#nk-edit-address-button_p2");
 
-        popupShow(button_p1, "Заполнять номер дома адреса по возрастанию с разницей 1");
-        popupShow(button_p2, "Заполнять номер дома адреса по возрастанию с разницей 2");
+        popupShow(button_p1, "Fill in the house number of the address in increasing order with the difference 1");
+        popupShow(button_p2, "Fill in the house number of the address in increasing order with the difference 2");
 
         button_p1.hover(() => {
           button_p1.addClass("nk-button_hovered");
@@ -302,7 +302,7 @@
    */
 
   window.appChrome.eventObect.append({
-    title: ['Адрес', 'Address'],
+    title: ['Address point', 'Address'],
     category: "addr",
     check: () => {
       const addressConflictsObject = $(".nk-sidebar-view.nk-geoobject-viewer-view:not([style]) .nk-address-conflicts");

@@ -120,7 +120,7 @@
       }
 
       const buttonLockText = buttonLock.text();
-      if (buttonLockText !== "Заблокировать") {
+      if (buttonLockText !== "Block") {
         $(".nk-portal-lock-pattern").remove();
         lastUser = null;
 

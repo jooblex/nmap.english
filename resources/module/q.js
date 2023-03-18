@@ -47,7 +47,7 @@
           epe = pe.querySelector('._180RolQxos');
 
           if(epe){
-            const l = e.href.replace(/yandex.ru\/q\/profile/,'n.maps.yandex.ru/#!/users');
+            const l = e.href.replace(/yandex.ru\/q\/profile/,'mapeditor.yandex.com/#!/users');
             epe.insertAdjacentHTML('afterend','<a href="'+l+'" target="_blank" style="z-index: 21">'+nks+'</a>')
           }
         });
@@ -63,7 +63,7 @@
         let l;
         if (epe && !(epe.className.indexOf('_2nk') + 1)) {
           epe.className += " _2nk-link";
-          l = document.location.href.replace(/yandex.ru\/q\/profile/, 'n.maps.yandex.ru/#!/users');
+          l = document.location.href.replace(/yandex.ru\/q\/profile/, 'mapeditor.yandex.com/#!/users');
 
           epe.insertAdjacentHTML('afterend', '<a href="' + l + '" target="_blank" style="z-index: 21">' + nks.replace(/"16"/g, '24').replace(/padding-left:5px;/, '') + '</a>');
 

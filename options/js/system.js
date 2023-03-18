@@ -39,7 +39,7 @@
     return row;
   };
 
-  creatRowTable(tableElement.find("#info"), "Версия расширения", manifest.version);
+  creatRowTable(tableElement.find("#info"), "Extension version", manifest.version);
 
 
   if (userAgent.indexOf("Firefox") > -1) {
@@ -53,42 +53,42 @@
   }else if (userAgent.indexOf("Edge") > -1) {
     browser = "Microsoft Edge " + userAgent.split("Edge/")[1].split(" ")[0];
   }else if (userAgent.indexOf("YaBrowser") > -1) {
-    browser = "Яндекс Браузер " + userAgent.split("YaBrowser/")[1].split(" ")[0];
+    browser = "Yandex Browser " + userAgent.split("YaBrowser/")[1].split(" ")[0];
   }else if (userAgent.indexOf("Chrome") > -1) {
     browser = "Google Chrome " + userAgent.split("Chrome/")[1].split(" ")[0];
   }else if (userAgent.indexOf("Safari") > -1) {
     browser = "Safari " + userAgent.split("Safari/")[1].split(" ")[0];
   }else {
-    browser = "Не определен";
+    browser = "Not defined";
   }
 
-  creatRowTable(tableElement.find("#info"), "Браузер", browser);
+  creatRowTable(tableElement.find("#info"), "Browser", browser);
 
 
-  const osElement = creatRowTable(tableElement.find("#info"), "Операционная система", "");
+  const osElement = creatRowTable(tableElement.find("#info"), "Operating system", "");
   chrome.runtime.getPlatformInfo((response) => {
     osElement.find(".doc-value").text(OS[response.os]);
   });
 
-  creatRowTable(tableElement.find("#info"), "Поддержка cookie", navigator.cookieEnabled ? "Да" : "Нет");
+  creatRowTable(tableElement.find("#info"), "Cookie support", navigator.cookieEnabled ? "Yes" : "No");
 
   chrome.storage.local.get(["nkSetting"], (result) => {
     setting = result.nkSetting;
-    moduleElement = creatRowTable(tableElement.find("#info"), "Подключенные модули", "").find(".doc-value");
+    moduleElement = creatRowTable(tableElement.find("#info"), "Connected modules", "").find(".doc-value");
   });
 
   $.ajax({
     type: "GET",
-    url: "https://n.maps.yandex.ru/",
+    url: "https://mapeditor.yandex.com/",
     dataType: "html",
     success: function (response) {
       const config = JSON.parse(response.split('id="config"')[1].split(">")[1].split("<")[0]);
       const totalTime = new Date().getTime() - ajaxTime;
 
-      tableElement.find("#nk").append("<h2>Народная карта</h2>");
+      tableElement.find("#nk").append("<h2>Yandex Map Editor</h2>");
 
-      creatRowTable(tableElement.find("#nk"), "Скорость загрузки", totalTime + " мс");
-      creatRowTable(tableElement.find("#nk"), "Версия", config.version);
+      creatRowTable(tableElement.find("#nk"), "Loading speed", totalTime + " ms");
+      creatRowTable(tableElement.find("#nk"), "Version", config.version);
 
       const data = [
         {
@@ -103,22 +103,22 @@
           'content-type': 'text/plain;charset=UTF-8',
           'x-kl-ajax-request': 'Ajax_Request',
           'x-csrf-token': config.api.csrfToken,
-          'x-lang': 'ru'
+          'x-lang': 'en'
         },
-        url: "https://n.maps.yandex.ru/" + config.api.url + "/batch",
+        url: "https://mapeditor.yandex.com/" + config.api.url + "/batch",
         dataType: "json",
         data: JSON.stringify(data),
         success: function (response) {
           const user = response.data[0].data;
 
-          let role = "Пользователь";
+          let role = "User";
 
           if (user.moderationStatus === "moderator") {
-            role = "Модератор";
+            role = "Moderator";
           }else if (user.outsourcer) {
-            role = "Аутсорсер";
+            role = "Outsourcer";
           }else if (user.yandex) {
-            role = "Сотрудник Яндекса";
+            role = "Yandex Stuff";
           }
 
           const access = user.moderationStatus === "moderator" || user.outsourcer || user.yandex;
@@ -136,10 +136,10 @@
           }
 
           if (!is_module) {
-            moduleElement.text("Нет подключенных модулей");
+            moduleElement.text("No modules connected");
           }
 
-          creatRowTable(tableElement.find("#nk"), "Роль", role);
+          creatRowTable(tableElement.find("#nk"), "Role", role);
         }
       });
     }

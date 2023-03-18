@@ -74,7 +74,7 @@
 
           const button = headerObject.find(".nk-button-favorite-object");
 
-          popupShow(button, !activeStatus ? "Добавить объект в любимые" : "Удалить объект из любимых");
+          popupShow(button, !activeStatus ? "Add object to favorites" : "Remove object from favorites");
           button.on("click", () => {
             const activeStatus = settingFavoriteObjects["user-objects"][nameObject] !== undefined;
 
@@ -170,7 +170,7 @@
         'content-type': 'text/plain;charset=UTF-8',
         'x-kl-ajax-request': 'Ajax_Request',
         'x-csrf-token': config.api.csrfToken,
-        'x-lang': 'ru'
+        'x-lang': 'en'
       },
       url: window.location.origin + config.api.url + "/batch",
       dataType: "json",

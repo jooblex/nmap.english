@@ -18,7 +18,7 @@
       "url": 'https://egrp365.org/p_map/?x=[lon]&y=[lat]&zoom=[z]&layer=2'
     },
     "2gis": {
-      "title": "2ГИС",
+      "title": "2GIS",
       "icon": '<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#299400" d="M16 28c6.6 0 12-5.376 12-12S22.6 4 16 4C9.376 4 4 9.376 4 16s5.376 12 12 12z"></path><path fill="#FFF" d="M16 8.08c4.003 0 6.72 3.048 6.72 6.336 0 1.32-.291 2.472-.97 3.912-3.979 0-4.707 2.616-4.877 4.368l-.12 1.464h-1.505l-.121-1.464c-.17-1.752-.898-4.368-4.877-4.368-.679-1.44-.97-2.592-.97-3.912 0-3.288 2.717-6.336 6.72-6.336z"></path></svg>',
       "url": 'https://2gis.ru/?m=[lat]%2C[lon]%2F[z]'
     },
@@ -145,7 +145,7 @@
       yandexMapButton.after('<button aria-disabled="false" class="nk-button nk-button_open-service nk-button_theme_air nk-button_size_xl nk-button_view_dark nk-map-region-view__button" aria-pressed="false" type="button"><span class="nk-icon nk-icon_id_ruler nk-icon_align_auto"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18 2.583c0-.322.261-.583.583-.583h.834c.322 0 .583.26.583.583V4h1.417c.322 0 .583.26.583.583v.833a.583.583 0 0 1-.583.584H20v1.416a.583.583 0 0 1-.583.584h-.834A.583.583 0 0 1 18 7.416V6h-1.417A.583.583 0 0 1 16 5.416v-.833c0-.322.261-.583.583-.583H18V2.583zM14.4 5.1c0-.246.02-.487.057-.722A8.11 8.11 0 0 0 12 4c-4.418 0-8 3.525-8 7.873 0 3.099 1.818 5.778 4.46 7.066 1.727.883 2.767 1.805 3.12 2.767a.447.447 0 0 0 .84 0c.353-.962 1.393-1.884 3.12-2.767 2.643-1.287 4.46-3.966 4.46-7.065 0-.813-.125-1.597-.358-2.335a4.5 4.5 0 0 1-5.242-4.44zm-.114 6.774c0 1.242-1.024 2.25-2.286 2.25s-2.286-1.007-2.286-2.25c0-1.242 1.024-2.25 2.286-2.25s2.286 1.006 2.286 2.25z" fill="currentColor"></path></svg></span></button>');
       const openServiceButton = menuBlock.find(".nk-button_open-service");
 
-      popupShow(openServiceButton, "Перейти на другой картографический сервис");
+      popupShow(openServiceButton, "Switch to another mapping service");
       openServiceButton.click(showPanel);
 
       openServiceButton.hover(() => {

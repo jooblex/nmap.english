@@ -19,21 +19,21 @@
     },
     menu: [
       {
-        label: "Что такое " + manifest.name,
+        label: "What is " + manifest.name,
         link: "/index.html"
       },
       {
-        label: "Модули",
+        label: "Modules",
         link: "/options/module/index.html",
         switcher: [
           {
-            label: "Любимые объекты",
+            label: "Favorite objects",
             link: "/options/module/favorite-objects.html",
             module: true,
             setting_name: "favorite-objects"
           },
           {
-            label: "Картографические сервисы",
+            label: "Map services",
             link: "/options/module/open-services.html",
             module: true,
             setting_name: "open-services"
@@ -41,7 +41,7 @@
         ]
       },
       {
-        label: "Системная информация",
+        label: "System information",
         link: "/options/system.html"
       }
     ]
@@ -99,7 +99,7 @@
 
   /* Генерация структуры документации */
 
-  html.attr("lang", "ru");
+  html.attr("lang", "en");
 
   head.append('<title>' + data.header.title + '</title>');
 
